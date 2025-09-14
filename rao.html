@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Xavi_Tech Official Page</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(45deg, #003366, #000000, #330033);
+      color: white;
+      text-align: center;
+      animation: flashColors 10s infinite;
+    }
+
+    @keyframes flashColors {
+      0% { background-color: #001f3f; }
+      25% { background-color: #003366; }
+      50% { background-color: #4B0082; }
+      75% { background-color: #000; }
+      100% { background-color: #001f3f; }
+    }
+
+    h1 {
+      font-size: 2.5em;
+      margin-top: 20px;
+      color: lime;
+    }
+
+    .emoji {
+      font-size: 1.5em;
+    }
+
+    .btn {
+      display: block;
+      width: 80%;
+      max-width: 300px;
+      margin: 15px auto;
+      padding: 15px;
+      background: linear-gradient(to right, #ff00cc, #3333ff);
+      border: none;
+      border-radius: 10px;
+      font-size: 1.2em;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;: transition: transform 0.2s ease;
+    }
+
+    .btn:hover {
+      transform: scale(1.05);
+    }
+
+    .section {
+      display: none;
+    }
+
+    .section.active {
+      display: block;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    .back-btn {
+      background-color: red;
+      margin-top: 20px;
+    }
+
+    .footer {
+      margin-top: 30px;
+      font-size: 1em;
+    }
+
+    .footer a {
+      color: #00ffcc;
+      text-decoration: none;
+    }
+
+    .pay {
+      font-weight: bold;
+      color: blue;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Xavi_Tech Official Page 🚀</h1>
+  <div class="emoji">✨🛡️</div>
+
+  <!-- Home Buttons -->
+  <div id="home">
+    <button class="btn" onclick="showSection('apks')">Premium APKs 🏆</button>
+    <button class="btn" onclick="showSection('vpn')">VPN Files 🔐</button>
+    <button class="btn" onclick="showSection('hacking')">Hacking Tools 🧑‍💻</button>
+    <button class="btn" onclick="showSection('games')">Games & OBB Mods 🎮</button>
+
+    <div class="footer">
+      <p>Payment via M-PESA to <span class="pay">0743810633</span><br/>
+      Contact: <a href="https://wa.me/254743810633" target="_blank">WhatsApp</a></p>
+    </div>
+  </div>
+
+  <!-- Sections -->
+ <div id="apks" class="section">
+    <h2>Premium APKs 🏆</h2>
+    <a class="btn" href="https://wa.me/254106782790" target="_blank">Request Link from Xavi</a>
+    <p>Payment via M-PESA to <span class="pay">0743810633</span></p>
+    <a class="btn" href="https://wa.me/254743810633" target="_blank">Send Screenshot to  Confirm Payment</a>
+    <button class="btn back-btn" onclick="goBack()">Go Back</button>
+  </div>
+
+  <div id="vpn" class="section">
+    <h2>VPN Files 🔐</h2>
+    <a class="btn" href="https://wa.me/254106782790" target="_blank">Request Link from Xavi</a>
+    <p>Payment via M-PESA to <span class="pay">0743810633</span></p>
+    <a class="btn" href="https://wa.me/254743810633" target="_blank">Send Screenshot to  Confirm Payment</a>
+    <button class="btn back-btn" onclick="goBack()">Go Back</button>
+  </div>
+
+  <div id="hacking" class="section">
+    <h2>Hacking Tools 🧑‍💻</h2>
+    <a class="btn" href="https://wa.me/254106782790" target="_blank">Request Link from Xavi</a>
+    <p>Payment via M-PESA to <span class="pay">0743810633</span></p>
+    <a class="btn" href="https://wa.me/254743810633" target="_blank">Send Screenshot to Confirm Payment</a>
+    <button class="btn back-btn" onclick="goBack()">Go Back</button>
+  </div>
+
+  <div id="games" class="section">
+    <h2>Games & OBB Mods 🎮</h2>
+ <a class="btn" href="https://wa.me/254106782790" target="_blank">Request Link from Xavi</a>
+    <p>Payment via M-PESA to <span class="pay">0743810633</span></p>
+    <a class="btn" href="https://wa.me/254743810633" target="_blank">Send Screenshot to Confirm Payment</a>
+    <button class="btn back-btn" onclick="goBack()">Go Back</button>
+  </div>
+
+  <script>
+    function showSection(id) {
+      document.getElementById("home").style.display = "none";
+      document.querySelectorAll('.section').forEach(el => el.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+    }
+
+    function goBack() {
+      document.getElementById("home").style.display = "block";
+      document.querySelectorAll('.section').forEach(el => el.classList.remove('active'));
+    }
+  </script>
+
+</body>
+</html>
+               
